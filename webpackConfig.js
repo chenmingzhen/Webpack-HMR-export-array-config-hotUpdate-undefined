@@ -5,12 +5,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = [
   /** for style */
   {
+    /** 打包成main */
     entry: [
       path.resolve(__dirname, "style.ts"),
       path.resolve(__dirname, "index.less"),
     ],
+    optimization: {
+      runtimeChunk: "single",
+    },
     output: {
-      filename: "style.js",
       publicPath: "http://localhost:4000/",
     },
     mode: "development",
