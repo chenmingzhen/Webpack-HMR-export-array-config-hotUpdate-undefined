@@ -1,6 +1,6 @@
 # `Uncaught TypeError: Cannot set properties of undefined` reproducible repo
 
-This repo can reproduce the undefined problem in my Webpack HMR
+This repo can be used to reproduce the error reported in [webpack issues](https://github.com/webpack/webpack/issues/15988).
 
 ## Environment
 
