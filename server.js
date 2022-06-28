@@ -41,6 +41,9 @@ router.get("/*.*", async (ctx, next) => {
     method: "GET",
   };
 
+  /** 升级WebpackDevServer后，less,css的热更新会在后面加上一个时间戳，需要将时间戳去掉 */
+  url = url.split("?")[0];
+
   if (url.endsWith(".css")) {
     ctx.set("Content-Type", "text/css; charset=utf-8");
   }
