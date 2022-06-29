@@ -7,6 +7,10 @@ const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"
 /** @see https://github.com/toBeTheLight/issue-20211215/blob/master/webpack5/webpack.compliers.config.js#L3 */
 /** @see https://webpack.js.org/configuration/output/#outputuniquename */
 
+/** React保留状态 */
+/** @see https://github.com/pmmmwh/react-refresh-webpack-plugin */
+
+
 /** @type import('webpack').Configuration)[] */
 module.exports = [
   /** for style */
@@ -92,6 +96,6 @@ module.exports = [
       ],
     },
 
-    plugins: [new ReactRefreshWebpackPlugin()],
+    plugins: [new ReactRefreshWebpackPlugin({ overlay: { sockPort: 4001 } })],
   },
 ];
