@@ -32,6 +32,7 @@ router.get("*/*.hot-update.js(on)?", async (ctx) => {
 });
 
 router.get("/*.*", async (ctx, next) => {
+  /** @type string|string[] */
   let url = ctx.url.split("/");
 
   url = url[url.length - 1];
